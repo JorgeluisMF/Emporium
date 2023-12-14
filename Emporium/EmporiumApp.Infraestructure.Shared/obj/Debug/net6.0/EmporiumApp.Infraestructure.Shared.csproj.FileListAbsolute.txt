@@ -1,0 +1,17 @@
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\bin\Debug\net6.0\EmporiumApp.Infraestructure.Shared.deps.json
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\bin\Debug\net6.0\EmporiumApp.Infraestructure.Shared.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\bin\Debug\net6.0\EmporiumApp.Infraestructure.Shared.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\bin\Debug\net6.0\EmporiumApp.Core.Application.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\bin\Debug\net6.0\EmporiumApp.Core.Domain.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\bin\Debug\net6.0\EmporiumApp.Core.Application.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\bin\Debug\net6.0\EmporiumApp.Core.Domain.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.csproj.AssemblyReference.cache
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.AssemblyInfoInputs.cache
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.AssemblyInfo.cs
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.csproj.CoreCompileInputs.cache
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.csproj.CopyComplete
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\refint\EmporiumApp.Infraestructure.Shared.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\EmporiumApp.Infraestructure.Shared.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Shared\obj\Debug\net6.0\ref\EmporiumApp.Infraestructure.Shared.dll

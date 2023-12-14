@@ -1,0 +1,64 @@
+﻿@using EmporiumApp.Core.Application.ViewModels.SalesType
+@model List<SaleTypeViewModel>
+
+
+<div class="row">
+
+    <div class="col-8 mx-auto">
+
+
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Tipo de venta</h1>
+                    <p class="lead text-muted">Esta es la lista de tipos de ventas</p>
+                    <p>
+                        <a asp-controller="SaleType" asp-action="Add" class="btn btn-danger my-2">Añadir tipo de venta</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <section class="col-6 bg-danger rounded-3 text-white text-center mx-auto p-4 mt-5">
+                <h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> No hay tipo de venta </h3>
+            </section>
+        }
+        else
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-light">
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Cantidad de productos en propiedad</th>
+                        <th class="text-center" scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (SaleTypeViewModel item in Model)
+                    {
+                        <tr class="table-light">
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@item.ProductQty</td>
+                            <td>
+
+                                <div class="d-flex justify-content-start w-100">
+
+                                    <a asp-controller="SaleType" asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-info me-2 w-100"> Editar </a>
+                                    <a asp-controller="SaleType" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger me-2 w-100"> eliminar </a>
+
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+</div>

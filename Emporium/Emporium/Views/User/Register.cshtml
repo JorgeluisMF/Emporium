@@ -1,0 +1,130 @@
+﻿@using EmporiumApp.Core.Application.Dtos.Account
+@using EmporiumApp.Core.Application.Enums
+@using EmporiumApp.Core.Application.Helpers
+@using EmporiumApp.Core.Application.ViewModels.User
+@using EmporiumApp.Infraestructure.Identity.Entities
+@using Microsoft.AspNetCore.Http
+@model UserSaveViewModel
+@{
+    bool editMode = Model.Id == null || Model.Id == "" ? false : true;
+    int rol = Model.TypeUser;
+    int count = 1;
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="row">
+    <div class="col-5 mx-auto">
+        <div class="card shadow bg-light">
+            <div class="card-body">
+                @if (Model.HasError == true)
+                {
+                    <div class="alert alert-danger alert-dimissible fade show" role="alert">
+                        <p>@Model.Error</p>
+                        <button type="button" class="btn-close" data-bs-dimiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+                <form asp-controller="User" asp-action=@(editMode ? "UpdateUser" : "Register") method="post" class="row gap-3 my-3" enctype="multipart/form-data">
+                    <div class="text-center my-2">
+                        <h3 class="text-dark w-100">
+                            @(editMode ? $"Edit User" : "Join to the App")
+                        </h3>
+                    </div>
+                    <section class="col-5 mx-auto mt-2">
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="FirstName" class="form-control" placeholder="Name" />
+                            <label asp-for="FirstName"> Name </label>
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="LastName" class="form-control" placeholder="Lastname" />
+                            <label asp-for="LastName" class="form-label">Lastname </label>
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Email" class="form-control" placeholder="Email" />
+                            <label asp-for="Email" class="form-label">Email </label>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        @if ((!editMode))
+                        {
+                            <div class="form-floating">
+                                <select asp-for="TypeUser" class="form-select" id="rol-select" aria-label="Default select example">
+
+                                    <option selected>Select user role</option>
+
+                                    @foreach (var item in ViewBag.Roles)
+                                    {
+                                        if (@item.Name != "Admin" && @item.Name != "Developer")
+                                        {
+                                            if (@item.Name == "Agent")
+                                            {
+                                                <option value="@((int)Roles.Agent)">@item.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@((int)Roles.Client)">@item.Name</option>
+                                            }
+                                        }
+                                        count++;
+                                    }
+                                </select>
+                            </div>
+                        }
+                    </section>
+                    <section class="col-5 mx-auto mt-2">
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="PhoneNumber" class="form-control" placeholder="Phone number" />
+                            <label asp-for="PhoneNumber" class="form-label">Phone number </label>
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="UserName" class="form-control" placeholder="User" />
+                            <label asp-for="UserName" class="form-label"> User </label>
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Password" class="form-control" placeholder="Password" />
+                            <label asp-for="Password" class="form-label">Password </label>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" />
+                            <label asp-for="ConfirmPassword" class="form-label">Confirm Password </label>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </section>
+
+                    <input type="hidden" asp-for="Id" name="Id" value="@Model.Id" />
+
+
+                    <section class="col-11 mx-auto">
+                        <div class="form-group mb-3">
+                            <label asp-for="ProfilePictureFile" class="form-label text-muted fw-bold">Select profile photo </label>
+                            @if (editMode)
+                            {
+                                <input asp-for="ProfilePictureFile" class="form-control">
+                            }
+                            else
+                            {
+                                <input required asp-for="ProfilePictureFile" class="form-control">
+                            }
+                        </div>
+                    </section>
+                    <div class="col-11 mx-auto">
+                        <button type="submit" class="btn btn-success btn-lg w-100 mt-2">Save</button>
+                        <a asp-controller="User" asp-action="Index" class="btn btn-secondary w-100 mt-2">Back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

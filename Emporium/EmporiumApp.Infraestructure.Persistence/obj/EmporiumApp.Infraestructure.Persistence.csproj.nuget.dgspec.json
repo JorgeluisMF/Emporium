@@ -1,0 +1,240 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Infraestructure.Persistence\\EmporiumApp.Infraestructure.Persistence.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Application\\EmporiumApp.Core.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Application\\EmporiumApp.Core.Application.csproj",
+        "projectName": "EmporiumApp.Core.Application",
+        "projectPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Application\\EmporiumApp.Core.Application.csproj",
+        "packagesPath": "C:\\Users\\La Rabia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\La Rabia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\EmporiumApp.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\EmporiumApp.Core.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.1.34, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.24, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.TestPlatform.ObjectModel": {
+              "target": "Package",
+              "version": "[17.7.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\EmporiumApp.Core.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\EmporiumApp.Core.Domain.csproj",
+        "projectName": "EmporiumApp.Core.Domain",
+        "projectPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\EmporiumApp.Core.Domain.csproj",
+        "packagesPath": "C:\\Users\\La Rabia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\La Rabia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Infraestructure.Persistence\\EmporiumApp.Infraestructure.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Infraestructure.Persistence\\EmporiumApp.Infraestructure.Persistence.csproj",
+        "projectName": "EmporiumApp.Infraestructure.Persistence",
+        "projectPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Infraestructure.Persistence\\EmporiumApp.Infraestructure.Persistence.csproj",
+        "packagesPath": "C:\\Users\\La Rabia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Infraestructure.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\La Rabia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Application\\EmporiumApp.Core.Application.csproj": {
+                "projectPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Application\\EmporiumApp.Core.Application.csproj"
+              },
+              "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\EmporiumApp.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\La Rabia\\source\\repos\\Emporium\\EmporiumApp.Core.Domain\\EmporiumApp.Core.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.24, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.24, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

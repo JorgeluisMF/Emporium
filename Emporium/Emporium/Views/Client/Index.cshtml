@@ -1,0 +1,129 @@
+﻿@using EmporiumApp.Core.Application.ViewModels.Product
+@using EmporiumApp.Core.Application.ViewModels.ProductType
+
+@model List<ProductViewModel>
+
+@{
+    bool mode = false;
+}
+
+<div class="row mx-5">
+
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Productos</h1>
+                <p class="lead text-muted">Aqui estan los productos disponibles!</p>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="col-sm-3 w-100 d-flex align-items-center gap-4 mb-3">
+        <form asp-controller="Client" asp-action="Index" class="d-flex align-items-center gap-2 w-100">
+            <select class="form-select w-100" name="propertyTypeId" id="productTypeId">
+                @if (ViewBag.ProductTypes == null)
+                {
+                    <option disabled selected>No hay productos...</option>
+                }
+                <option disabled selected> Seleccionar producto...</option>
+                <option value="null">Todas</option>
+                @foreach (ProductTypeViewModel item in ViewBag.ProductTypes)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+            <div class="form-group w-100">
+                <input class="form-control" name="MinPrice" id="MinPrice" placeholder="Precio Min.">
+            </div>
+            <div class="form-group w-100">
+                <input class="form-control" name="MaxPrice" id="MaxPrice" placeholder="Precio Max.">
+            </div>
+            <div class="form-group w-100">
+                <input class="form-control" name="roomQty" id="roomQty" placeholder="Cantidad Vendidas">
+            </div>
+            <div class="form-group w-100">
+                <input class="form-control" name="restRoomQty" id="restRoomQty" placeholder="Cantidad Disponibles">
+            </div>
+            <button class="btn btn-success" type="submit">Filtro</button>
+        </form>
+        <form asp-controller="Home" asp-action="Index" class="d-flex align-items-center gap-2 w-25">
+            <input class="form-control w-100" type="text" name="code" id="code" placeholder="Buscar por codigo">
+            <button class="btn btn-success" type="submit">Buscar</button>
+        </form>
+    </div>
+
+    @if (Model.Count == 0 || Model == null)
+    {
+        <section class="col-6 bg-danger rounded-3 text-white text-center mx-auto p-4 mt-5">
+            <h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> No hay productos disponibles </h3>
+        </section>
+    }
+    @foreach (ProductViewModel item in Model)
+    {
+        mode = item.IsFavourite == false ? false : true;
+
+        <section class="col-3 my-4 mx-auto slide-up">
+            <a asp-controller="Home" asp-action="Details" class="card bg-light border-0 shadow" asp-route-id="@item.Id">
+                <section class="card-body">
+                    <img src="@item.ProductImgUrl1" class="card-img-top img-fluid img-cover-2" alt="Propiedad">
+                    <div class="d-flex flex-column gap-2 mt-3">
+                        <div class="d-flex flex-column">
+                            <h6 class="fw-bold">
+                                @item.ProductType
+                            </h6>
+                            <h6 class="">
+                                @item.Ubication
+                            </h6>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h6 class="">
+                                Códe
+                            </h6>
+                            <h6 class="fw-bold">
+                                @item.Code
+                            </h6>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h6 class="">
+                                @item.SaleType
+                            </h6>
+                            <h6 class="text-danger fw-bold">
+                                @item.Price
+                            </h6>
+                        </div>
+                        <form method="post" asp-controller="Client" asp-action="SetCarrito" class="d-flex justify-content-start align-items-center gap-2">
+                            <input hidden name="id" value="@item.Id" />
+                            @if (mode)
+                            {
+                                <button type="submit" class="btn btn-danger me-3">Eliminar del carrito</button>
+                            }
+                            else
+                            {
+                                <button type="submit" class="btn btn-success me-3">Añadir al carrito</button>
+                            }
+                        </form>
+                    </div>
+                </section>
+                <section class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center gap-5">
+                        <section class="d-flex justify-content-center align-items-center gap-2">
+                            <img src="" />
+                            <h6 class="fw-bold m-0"> @item.RoomQty </h6>
+                        </section>
+                        <section class="d-flex justify-content-center align-items-center gap-2">
+                            <img src="" />
+                            <h6 class="fw-bold m-0"> @item.RestRoomQty </h6>
+                        </section>
+                        <section class="d-flex justify-content-center align-items-center gap-2">
+                            <img src="" />
+                            <h6 class="fw-bold m-0"> @item.ParcelSize Kg </h6>
+                        </section>
+                    </div>
+                </section>
+            </a>
+        </section>
+    }
+
+</div>

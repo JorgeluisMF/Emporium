@@ -1,0 +1,17 @@
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\bin\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.deps.json
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\bin\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\bin\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\bin\Debug\net6.0\EmporiumApp.Core.Application.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\bin\Debug\net6.0\EmporiumApp.Core.Domain.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\bin\Debug\net6.0\EmporiumApp.Core.Application.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\bin\Debug\net6.0\EmporiumApp.Core.Domain.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.csproj.AssemblyReference.cache
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.AssemblyInfoInputs.cache
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.AssemblyInfo.cs
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.csproj.CopyComplete
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\refint\EmporiumApp.Infraestructure.Persistence.dll
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\EmporiumApp.Infraestructure.Persistence.pdb
+C:\Users\La Rabia\source\repos\Emporium\EmporiumApp.Infraestructure.Persistence\obj\Debug\net6.0\ref\EmporiumApp.Infraestructure.Persistence.dll

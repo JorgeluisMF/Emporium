@@ -1,0 +1,52 @@
+﻿@using EmporiumApp.Core.Application.ViewModels.User
+@model List<UserViewModel>
+
+<div class="row">
+    <div class="col-8 mx-auto">
+
+
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Agents</h1>
+                    <p class="lead text-muted">You can search any agents here!</p>
+
+                </div>
+            </div>
+        </section>
+
+        <form asp-controller="Agent" asp-action="Agents" class="d-flex justify-content-end align-items-center gap-2">
+            <input class="form-control" type="text" name="name" id="name" placeholder="Search by name">
+            <button class="btn btn-success" type="submit">Search</button>
+        </form>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <section class="col-6 bg-danger rounded-3 text-white text-center mx-auto p-4 mt-5">
+                <h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> There is not agents registered </h3>
+            </section>
+        }
+
+        <div class="row mt-5">
+            @foreach (UserViewModel item in Model)
+            {
+                <a asp-controller="Product" asp-action="AgentProducts" asp-route-id="@item.Id" class="col-3 mx-auto">
+                    <section class="d-flex flex-column align-items-center bg-light gap-2 rounded shadow p-5">
+                        @if (item.ProfilePicture != null)
+                        {
+                            <img src="@item.ProfilePicture" class="img-fluid" style="width: 50px;height: 50px; border-radius: 50%;" alt="img">
+                        }
+                        else
+                        {
+                            <img src="~/images/default-agent.png" class="img-fluid" style="width: 50px;height: 50px; border-radius: 50%;" alt="img">
+                        }
+                        <h5 class="fw-bold">@item.FirstName @item.LastName</h5>
+                    </section>
+                </a>
+            }
+        </div>
+
+    </div>
+
+</div>
+

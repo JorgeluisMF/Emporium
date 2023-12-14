@@ -1,0 +1,35 @@
+﻿@using EmporiumApp.Core.Application.ViewModels.User
+@model LoginViewModel
+
+<div class="row">
+    <div class="col-4 mx-auto bg-light rounded-3 shadow p-5 mt-5">
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        @if (Model.HasError == true)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <p>@Model.Error</p>
+                <button type="button" class="btn btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        <form method="post" asp-controller="User" asp-action="Index" class="d-flex flex-column justify-content-center gap-4">
+            <div class="d-flex justify-content-center align-items-center">
+                <h3 class="text-dark text-center w-100">
+                    Iniciar Sesion
+                </h3>
+            </div>
+            <div class="form-group">
+                <div class="form-floating mb-3">
+                    <input asp-for="Email" class="form-control" placeholder="srosadotaveras@gmail.com">
+                    <label asp-for="Email">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" asp-for="Password" placeholder="*****">
+                    <label asp-for="Password">Contraseña</label>
+                </div>
+                <div class="form-group mt-5">
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Iniciar Sesion</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

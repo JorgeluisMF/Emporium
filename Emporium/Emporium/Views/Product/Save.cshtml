@@ -1,0 +1,133 @@
+﻿@using EmporiumApp.Core.Application.ViewModels.Product
+@using EmporiumApp.Core.Application.ViewModels.ProductType
+@using EmporiumApp.Core.Application.ViewModels.SalesType
+@using EmporiumApp.Core.Application.ViewModels.Improvement
+
+@model ProductSaveViewModel
+
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+}
+
+<div class="row">
+    <div class="col-5 mx-auto">
+
+        @if (ViewBag.ProductTypes == null ||
+        ViewBag.SaleTypes.Count == 0 ||
+        ViewBag.Improvements.Count == 0)
+        {
+            <section class="col-10 bg-danger rounded-3 text-white text-center mx-auto p-4 mt-5">
+                <h3 class="display-8 fw-normal text-uppercase fw-bolder m-0">
+                    Debes crear almenos un tipo de productom, tipo de venta y mejoras
+                </h3>
+            </section>
+        }
+
+        else
+        {
+
+            <div class="card shadow bg-white">
+                <div class="card-body">
+
+                    <form asp-controller="Product" asp-action=@(editMode ? "UpdateProduct" : "AddProduct") method="post" class="row gap-3 my-3" enctype="multipart/form-data">
+                        <div class="text-center my-2">
+                            <h3 class="text-dark w-100">
+                                @(editMode ? $"Edit Producto" : "Añadir Producto")
+                            </h3>
+                        </div>
+
+
+                        <section class="col-8 mx-auto mt-2">
+                            <div class="form-floating mb-3">
+                                <input asp-for="Ubication" class="form-control" placeholder="Ubicacion" />
+                                <label asp-for="Ubication">Ubicacion</label>
+                                <span asp-validation-for="Ubication" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="number" asp-for="Price" class="form-control" placeholder="Precio" />
+                                <label asp-for="Price" class="form-label">Precio</label>
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="number" asp-for="ParcelSize" class="form-control" placeholder="Peso del producto" />
+                                <label asp-for="ParcelSize" class="form-label">Peso del producto</label>
+                                <span asp-validation-for="ParcelSize" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="number" asp-for="RoomQty" class="form-control" placeholder="Cantidad Vendidas" />
+                                <label asp-for="RoomQty" class="form-label">Cantidad vendidas</label>
+                                <span asp-validation-for="RoomQty" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="number" asp-for="RestRoomQty" class="form-control" placeholder="Cantidad Disponible" />
+                                <label asp-for="RestRoomQty" class="form-label">Cantidad disponibles</label>
+                                <span asp-validation-for="RestRoomQty" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <textarea asp-for="Description" class="form-control" placeholder="Descripcion"></textarea>
+                                <label asp-for="Description" class="form-label">Descripcion</label>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="ProductImg1" class="form-label text-dark fw-bold">Seleccionar imagenes</label>
+                                @if (editMode)
+                                {
+                                    <input asp-for="ProductImg1" class="form-control">
+                                }
+                                else
+                                {
+                                    <input required asp-for="ProductImg1" class="form-control">
+                                }
+                                <input asp-for="ProductImg2" class="form-control">
+                                <input asp-for="ProductImg3" class="form-control">
+                                <input asp-for="ProductImg4" class="form-control">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="form-label text-dark fw-bold">Options</label>
+                                <select asp-for="ProductTypeId" class="form-select mb-2 w-100" name="ProductTypeId">
+                                    <option disabled selected>Seleccionar tipo de producto...</option>
+                                    @foreach (ProductTypeViewModel item in ViewBag.ProductTypes)
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                </select>
+                                <select asp-for="SaleTypeId" class="form-select mb-2 w-100" name="SaleTypeId">
+                                    <option disabled selected>Seleccionar tipo de venta...</option>
+                                    @foreach (SaleTypeViewModel item in ViewBag.SaleTypes)
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                </select>
+                                <select multiple asp-for="ListImprovement" class="form-select mb-2 w-100" name="ListImprovement">
+                                    <option disabled>Select enhancements...</option>
+                                    @foreach (ImprovementViewModel item in ViewBag.Improvements)
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </section>
+
+                        <input type="hidden" asp-for="AgentName" name="AgentName" value="@Model.AgentName" />
+                        <input type="hidden" asp-for="IdAgent" name="IdAgent" value="@Model.IdAgent" />
+                        <input type="hidden" asp-for="Id" name="Id" value="@Model.Id" />
+                        <input type="hidden" asp-for="Code" name="Code" value="@Model.Code" />
+
+                        <div class="col-8 mx-auto">
+                            <button type="submit" class="btn btn-success btn-lg w-100 mt-2">Save</button>
+                            <a asp-controller="Product" asp-action="AgentProducts" class="btn btn-secondary w-100 mt-2">Volver</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

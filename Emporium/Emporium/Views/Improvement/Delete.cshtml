@@ -1,0 +1,28 @@
+﻿@using EmporiumApp.Core.Application.ViewModels.Improvement
+@model ImprovementSaveViewModel
+
+<div class="row mt-5">
+    <div class="col-6 offset-3">
+        <div class="card">
+
+            <div class="card-header bg-danger text-light">
+
+                <h4 class="text-center">Are you sure you want to remove this improvement?</h4>
+            </div>
+
+            <div class="card-body bg-light">
+                <form method="post" asp-controller="Improvement" asp-action="Delete">
+                    <div class="form-group">
+                    </div>
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger me-3">Delete</button>
+                        <a asp-controller="Improvement" asp-action="Index" class="btn btn-success">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
